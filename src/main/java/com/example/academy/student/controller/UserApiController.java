@@ -35,12 +35,13 @@ public class UserApiController {
     private final PasswordEncoder passwordEncoder;
 
     @GetMapping(UserRoutes.REG)
+    @Operation(summary = "Тест")
     public String test() {
         return "OK";
     }
 
     @PostMapping(UserRoutes.REG)
-    @Operation(summary = "Регистрация пользователя")
+    @Operation(summary = "Регистрация студента")
     public StudentResponse registration(@RequestBody RegistrationRequest request) throws BadRequestException, StudentAlredyExistException {
 
         Optional<StudentEntity> check =  studentRepository.findByEmail(request.getEmail());

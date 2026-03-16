@@ -2,9 +2,11 @@ package com.example.academy.course.dto.response;
 
 import com.example.academy.course.entity.CourseEntity;
 import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+@Data
 @Getter
 @Setter
 @Builder
